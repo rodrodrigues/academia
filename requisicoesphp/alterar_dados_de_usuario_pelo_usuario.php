@@ -26,6 +26,9 @@ if (!empty($email_usuario)) {
       echo "xabu baby";
     }
 }
+if (empty($email_usuario) && empty($senha_usuario)) {
+  echo "Nada foi alterado!";
+}
 
 
 ?>

@@ -13,20 +13,9 @@
    <li class="nav-item">
      <a class="nav-link active" href='novo_usuario.php'>Cadastrar novo usuário</a>
    </li>
+
    <li class="nav-item">
-     <a class="nav-link" href="busca_usuario.php">Alterar Conta de usuário</a>
-   </li>
-   <li class="nav-item">
-     <a class="nav-link" href="#">Bloquear Conta de usuário</a>
-   </li>
-   <li class="nav-item">
-     <a class="nav-link" href="#">Excluir Conta de usuario</a>
-   </li>
-   <li class="nav-item">
-     <a class="nav-link" href="#">Disponibilizar Série</a>
-   </li>
-   <li class="nav-item">
-     <a class="nav-link" href="#">Disponibilizar dados de avaliações</a>
+     <a class="nav-link" href="busca_usuario.php">Buscar usuário</a>
    </li>
    <li class="nav-item">
      <a class="nav-link" href="#">Disponibilizar horários para avaliações</a>

@@ -13,7 +13,7 @@ if (mysqli_num_rows($resultado) > 0) {
     $row = mysqli_fetch_assoc($resultado);
     $_SESSION['matuser'] = $matricula;
 
-    header("Location: ../administrador/altera_dados.php");
+    header("Location: ../administrador/dados_de_usuario.php");
   } else {
     echo "ja sabe que deu xabu";
   }
