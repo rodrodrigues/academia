@@ -3,8 +3,6 @@
 include("conexao.php");
 include("funcoes.php");
 
-session_start();
-
 $matricula = $_POST["matricula"];
 $senha = $_POST["senha"];
 

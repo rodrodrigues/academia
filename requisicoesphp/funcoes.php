@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
   function encerraSessao(){
     session_unset();
     session_destroy();

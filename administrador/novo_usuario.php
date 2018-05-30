@@ -1,8 +1,7 @@
-<?php 
+<?php
     include("../padrao/cabecalho.php");
     include("../requisicoesphp/funcoes.php");
 
-    session_start();
     verificaLogin();
 
 ?>
@@ -36,7 +35,7 @@
         <tr>
             <td><input type="submit" name="enviar" value="Cadastrar"></td>
         </tr>
-        
+
     </table>
 </form>
 

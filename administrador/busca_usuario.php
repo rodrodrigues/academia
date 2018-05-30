@@ -2,7 +2,6 @@
     include("../padrao/cabecalho.php");
     include("../requisicoesphp/funcoes.php");
 
-    session_start();
     verificaLogin();
 ?>
 

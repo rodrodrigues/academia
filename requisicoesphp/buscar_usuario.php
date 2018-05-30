@@ -11,10 +11,7 @@ $resultado = mysqli_query($conexao, $query);
 
 if (mysqli_num_rows($resultado) > 0) {
     $row = mysqli_fetch_assoc($resultado);
-    setcookie("nome", $row['nome']);
-    setcookie("email", $row['email']);
-    setcookie("peso", $row['peso']);
-    setcookie("altura", $row['altura']);
+    $_SESSION['matuser'] = $matricula;
 
     header("Location: ../administrador/altera_dados.php");
   } else {
