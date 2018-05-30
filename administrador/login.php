@@ -1,8 +1,9 @@
 <?php include("../padrao/cabecalho.php");
-         
+      include("../requisicoesphp/conexao.php");
+
 ?>
 
-  <h1>Bem vindo a ppágina de login do administrador</h1>
+  <h1>Bem vindo a página de login do administrador</h1>
 
   <form class="" action="../requisicoesphp/realizar_login_administrador.php" method="post">
     <table>
@@ -21,10 +22,6 @@
   </form>
   <div class="">
     <p>
-      <?php $_SESSION['MsgErro'];
-            include("../requisicoesphp/funcoes.php");
-            encerraSessao();
-        ?>
-  </p>
+    </p>
   </div>
 <?php include("../padrao/rodape.php"); ?>

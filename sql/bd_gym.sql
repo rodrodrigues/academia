@@ -2,10 +2,10 @@
 -- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: 29-Maio-2018 às 23:33
+-- Host: localhost
+-- Tempo de geração: 30/05/2018 às 04:27
 -- Versão do servidor: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Versão do PHP: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bd_gym`
+-- Banco de dados: `bd_gym`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `funcionario`
+-- Estrutura para tabela `funcionario`
 --
 
 CREATE TABLE `funcionario` (
@@ -37,7 +37,7 @@ CREATE TABLE `funcionario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `funcionario`
+-- Fazendo dump de dados para tabela `funcionario`
 --
 
 INSERT INTO `funcionario` (`matricula`, `nome`, `ocupacao`, `email`, `senha`) VALUES
@@ -46,32 +46,32 @@ INSERT INTO `funcionario` (`matricula`, `nome`, `ocupacao`, `email`, `senha`) VA
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuario`
+-- Estrutura para tabela `usuario`
 --
 
 CREATE TABLE `usuario` (
-  `matricula` int(7) NOT NULL,
-  `nome` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `peso` decimal(3,2) NOT NULL,
-  `altura` decimal(3,2) NOT NULL,
-  `senha` varchar(255) NOT NULL
+  `matricula` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `telefone` varchar(11) NOT NULL,
+  `endereco` varchar(200) NOT NULL,
+  `senha` varchar(100) NOT NULL,
+  `peso` decimal(10,2) NOT NULL,
+  `altura` decimal(10,2) NOT NULL,
+  `cincunferenciaBraco` decimal(10,2) NOT NULL,
+  `circunferenciaPeito` decimal(10,2) NOT NULL,
+  `circunferenciaCintura` decimal(10,2) NOT NULL,
+  `circunferenciaCoxa` decimal(10,2) NOT NULL,
+  `circunferenciaPanturrilha` decimal(10,2) NOT NULL,
+  `serie` longtext NOT NULL,
+  `status` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Extraindo dados da tabela `usuario`
---
-
-INSERT INTO `usuario` (`matricula`, `nome`, `email`, `peso`, `altura`, `senha`) VALUES
-(1, 'q', '1', '0.00', '0.00', 'd41d8cd98f00b204e9800998ecf8427e'),
-(123, 'rodrigo', 'te@be', '9.99', '9.99', '202cb962ac59075b964b07152d234b70');
-
---
--- Indexes for dumped tables
+-- Índices de tabelas apagadas
 --
 
 --
--- Indexes for table `usuario`
+-- Índices de tabela `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`matricula`);

@@ -32,9 +32,7 @@ session_start();
 
     if ($_SESSION['matricula'] == null){
       header("Location: ../administrador/login.php");
-    } else {
-      echo $_SESSION['matricula'];
-    }
+    } 
   }
 
  ?>
