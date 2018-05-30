@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Tempo de geração: 30/05/2018 às 04:27
--- Versão do servidor: 10.1.32-MariaDB
--- Versão do PHP: 7.2.5
+-- Host: 127.0.0.1
+-- Generation Time: 30-Maio-2018 às 06:27
+-- Versão do servidor: 10.1.24-MariaDB
+-- PHP Version: 7.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `bd_gym`
+-- Database: `bd_gym`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `funcionario`
+-- Estrutura da tabela `funcionario`
 --
 
 CREATE TABLE `funcionario` (
@@ -37,7 +37,7 @@ CREATE TABLE `funcionario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Fazendo dump de dados para tabela `funcionario`
+-- Extraindo dados da tabela `funcionario`
 --
 
 INSERT INTO `funcionario` (`matricula`, `nome`, `ocupacao`, `email`, `senha`) VALUES
@@ -46,13 +46,14 @@ INSERT INTO `funcionario` (`matricula`, `nome`, `ocupacao`, `email`, `senha`) VA
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `usuario`
+-- Estrutura da tabela `usuario`
 --
 
 CREATE TABLE `usuario` (
   `matricula` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `telefone` varchar(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
   `endereco` varchar(200) NOT NULL,
   `senha` varchar(100) NOT NULL,
   `peso` decimal(10,2) NOT NULL,
@@ -67,15 +68,31 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Índices de tabelas apagadas
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`matricula`, `nome`, `telefone`, `email`, `endereco`, `senha`, `peso`, `altura`, `cincunferenciaBraco`, `circunferenciaPeito`, `circunferenciaCintura`, `circunferenciaCoxa`, `circunferenciaPanturrilha`, `serie`, `status`) VALUES
+(4, 'joao', '123456789', 'joaopedefeijao@gmail.com', 'rua do joaozin', 'e10adc3949ba59abbe56e057f20f883e', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '', 0);
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Índices de tabela `usuario`
+-- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`matricula`);
-COMMIT;
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `matricula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -31,8 +31,8 @@ session_start();
   function verificaLogin(){
 
     if ($_SESSION['matricula'] == null){
-      header("Location: ../administrador/login.php");
-    } 
+      header("Location: ../index.php");
+    }
   }
 
  ?>

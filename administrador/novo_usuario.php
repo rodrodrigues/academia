@@ -13,20 +13,16 @@
             <td><input type="text" name="nome_novo_usuario"></td>
         </tr>
         <tr>
-            <td>Matricula: </td>
-            <td><input type="number" maxlenght="5" name="matricula_novo_usuario"></td>
+            <td>Telefone para contato: </td>
+            <td><input type="text" name="telefone_novo_usuario"></td>
         </tr>
         <tr>
             <td>Email para contato: </td>
             <td><input type="text" name="email_novo_usuario"></td>
         </tr>
         <tr>
-            <td>Peso: </td>
-            <td><input type="text" name="peso_novo_usuario"></td>
-        </tr>
-        <tr>
-            <td>Altura: </td>
-            <td><input type="text" name="altura_novo_usuario"></td>
+            <td>Endereço: </td>
+            <td><input type="text" name="endereco_novo_usuario"></td>
         </tr>
         <tr>
             <td>Senha: </td>

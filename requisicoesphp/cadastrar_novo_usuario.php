@@ -3,20 +3,26 @@
 include("conexao.php");
 include("funcoes.php");
 
-$matricula_usuario = $_POST['matricula_novo_usuario'];
+//$matricula_usuario = $_POST['matricula_novo_usuario'];
 $nome_usuario = $_POST['nome_novo_usuario'];
+$telefone_usuario = $_POST['telefone_novo_usuario'];
 $email_usuario = $_POST['email_novo_usuario'];
-$peso_usuario = $_POST['peso_novo_usuario'];
-$altura_usuario = $_POST['altura_novo_usuario'];
+$endereco_usuario = $_POST['endereco_novo_usuario'];
 $senha_usuario = $_POST['senha_novo_usuario'];
 
 $senha_usuario_md5 = md5($senha_usuario);
 
-$query = "INSERT INTO usuario (matricula, nome, email, peso, altura, senha)
-          VALUES ('$matricula_usuario', '$nome_usuario', '$email_usuario', '$peso_usuario', '$altura_usuario', '$senha_usuario_md5')";
+if((!empty($nome_usuario)) && (!empty($telefone_usuario)) && (!empty($email_usuario)) && (!empty($endereco_usuario))
+   && (!empty($senha_usuario_md5))){
 
+
+$query = "INSERT INTO usuario (nome, telefone, email, endereco, senha)
+          VALUES ('$nome_usuario', '$telefone_usuario', '$email_usuario', '$endereco_usuario', '$senha_usuario_md5')";
+} else{
+    header("Location: ../administrador/novo_usuario.php");
+}
 if (mysqli_query($conexao, $query)) {
-    echo "New record created successfully";
+    echo "Usuário cadastrado com sucesso!";
 } else {
     echo "Error: " . $query . "<br>" . mysqli_error($conexao);
 }

@@ -9,6 +9,7 @@ $email_usuario = $_POST['attemail'];
 $peso_usuario = $_POST['attpeso'];
 $altura_usuario = $_POST['attaltura'];
 
+
 if (!empty($nome_usuario)) {
   $query = "UPDATE usuario SET nome = '$nome_usuario' WHERE matricula = $matricula_usuario";
 
