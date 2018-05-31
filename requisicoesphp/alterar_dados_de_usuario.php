@@ -14,7 +14,7 @@ if (!empty($nome_usuario)) {
   $query = "UPDATE usuario SET nome = '$nome_usuario' WHERE matricula = $matricula_usuario";
 
   if (mysqli_query($conexao, $query)) {
-    echo "Nome alterado";
+    echo " Nome alterado";
   } else {
     echo "xabu baby";
   }
@@ -23,7 +23,7 @@ if (!empty($email_usuario)) {
   $query = "UPDATE usuario SET email = '$email_usuario' WHERE matricula = $matricula_usuario";
 
   if (mysqli_query($conexao, $query)) {
-    echo "Email alterado";
+    echo " Email alterado";
   } else {
     echo "xabu baby";
   }
@@ -32,7 +32,7 @@ if (!empty($peso_usuario)) {
   $query = "UPDATE usuario SET peso = '$peso_usuario' WHERE matricula = $matricula_usuario";
 
   if (mysqli_query($conexao, $query)) {
-    echo "Peso alterado";
+    echo " Peso alterado";
   } else {
     echo "xabu baby";
   }
@@ -41,10 +41,14 @@ if (!empty($altura_usuario)) {
   $query = "UPDATE usuario SET altura = '$altura_usuario' WHERE matricula = $matricula_usuario";
 
   if (mysqli_query($conexao, $query)) {
-    echo "Altura alterada";
+    echo " Altura alterada";
   } else {
     echo "xabu baby";
   }
+}
+
+if (empty($email_usuario) && empty($nome_usuario) && empty($peso_usuario) && empty($altura_usuario)) {
+  echo " Nada foi alterado!";
 }
 
 
