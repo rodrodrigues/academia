@@ -2,7 +2,7 @@
 
 include("conexao.php");
 include("funcoes.php");
-<<<<<<< Updated upstream
+
 verificaLogin();
 $matricula = $_SESSION['matuser'];
 
@@ -13,7 +13,6 @@ $resultado = mysqli_query($conexao, $query);
 
 header("Location: ../administrador/dashboard.php");
 
-=======
 
 $senha_admin = $_POST['senha_admin'];
 $senha_admin_md5 = md5($senha_admin);
@@ -29,6 +28,6 @@ if ($senha_admin_md5 == $_SESSION['senha']) {
 } else {
   echo "nem deletou";
 }
->>>>>>> Stashed changes
+
 
 ?>
