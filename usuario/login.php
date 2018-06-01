@@ -1,5 +1,7 @@
 <?php include("../padrao/cabecalho.php");
       include("../requisicoesphp/conexao.php");
+      include("../requisicoesphp/funcoes.php");
+
 
 ?>
 
@@ -22,6 +24,7 @@
   </form>
   <div class="">
     <p>
+      <?= $_SESSION['msguser'] ?>
     </p>
   </div>
 <?php include("../padrao/rodape.php"); ?>

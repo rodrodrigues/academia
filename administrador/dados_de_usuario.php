@@ -15,15 +15,10 @@
      <a class="nav-link" href="altera_dados.php">Alterar Conta de usuário</a>
    </li>
    <li class="nav-item">
-     <a class="nav-link" href="">Bloquear Conta de usuário</a>
+     <a class="nav-link" href="bloqueia_usuario.php">Bloquear Conta de usuário</a>
    </li>
    <li class="nav-item">
-<<<<<<< Updated upstream
-          <a class="nav-link" href="exclui_usuario.php">Excluir Conta de usuario</a>
-     </div>
-=======
      <a class="nav-link" href="exclui_usuario.php">Excluir Conta de usuario</a>
->>>>>>> Stashed changes
    </li>
    <li class="nav-item">
      <a class="nav-link" href="#">Disponibilizar Série</a>

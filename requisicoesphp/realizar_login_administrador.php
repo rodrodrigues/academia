@@ -20,6 +20,8 @@ if (mysqli_num_rows($resultado) > 0) {
     $_SESSION['nome'] = $row['nome'];
     $_SESSION['adminsenha'] = $row['senha'];
 
+    $_SESSION['msgAdmin'] = " ";
+
     header("Location: ../administrador/dashboard.php");
 
 } else {

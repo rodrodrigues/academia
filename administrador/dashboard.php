@@ -9,6 +9,8 @@
  <h1>Olá <?= $_SESSION['nome'] ?></h1>
 <p>Seja bem vindo ao modulo do administrador da Academia</p>
 
+<p><?= $_SESSION['msgAdmin'] ?></p>
+
 <ul class="nav nav-tabs">
    <li class="nav-item">
      <a class="nav-link active" href='novo_usuario.php'>Cadastrar novo usuário</a>

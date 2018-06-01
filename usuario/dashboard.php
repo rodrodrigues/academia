@@ -3,6 +3,7 @@
   include("../requisicoesphp/funcoes.php");
 
   verificaLogin();
+  verificaBloqueio();
 
  ?>
 

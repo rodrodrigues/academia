@@ -35,6 +35,17 @@ session_start();
     }
   }
 
+  function verificaBloqueio(){
+
+    $status = $_SESSION['status'];
+
+    if ($status == 1) {
+      $_SESSION['msguser'] = "Conta  atualmente bloqueada. Procure a secretaria da academia para se informar sobre";
+      header("Location: ../usuario/login.php");
+    }
+
+  }
+
   function calculaIMC(){
 
     $peso = $_SESSION['peso'];
@@ -52,7 +63,6 @@ session_start();
 
     }
   }
-
 
 
  ?>
