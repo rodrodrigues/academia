@@ -18,6 +18,7 @@ if (mysqli_num_rows($resultado) > 0) {
 
     $_SESSION['matricula'] = $row['matricula'];
     $_SESSION['nome'] = $row['nome'];
+    $_SESSION['adminsenha'] = $row['senha'];
 
     header("Location: ../administrador/dashboard.php");
 

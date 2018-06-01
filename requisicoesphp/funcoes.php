@@ -35,6 +35,24 @@ session_start();
     }
   }
 
+  function calculaIMC(){
+
+    $peso = $_SESSION['peso'];
+    $altura = $_SESSION['altura'];
+
+    if (!empty($peso) && !empty($altura)){
+
+      $altura = $altura / 100;
+
+      $massa = $peso / ($altura * $altura);
+
+      $massa = number_format($massa, 2, '.', ',');
+
+      return $massa;
+
+    }
+  }
+
 
 
  ?>

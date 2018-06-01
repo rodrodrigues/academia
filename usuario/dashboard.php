@@ -8,6 +8,7 @@
 
  <h1>Olá <?= $_SESSION['nome'] ?></h1>
 <p>Seja bem vindo ao modulo do usuario da Academia</p>
+<p><?= $_SESSION['msg'] ?></p>
 
 <ul class="nav nav-tabs">
    <li class="nav-item">

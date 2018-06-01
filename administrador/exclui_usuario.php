@@ -1,4 +1,5 @@
 <?php
+<<<<<<< Updated upstream
   include("../padrao/cabecalho.php");
   include("../requisicoesphp/funcoes.php");
 
@@ -20,3 +21,27 @@
      </form>
 
  <?php include("../padrao/rodape.php"); ?>
+=======
+    include("../padrao/cabecalho.php");
+    include("../requisicoesphp/funcoes.php");
+
+    verificaLogin();
+?>
+
+<p>Você tem certeza que deseja excluir a senha de <?= $_SESSION['nomeuser']; ?></p>
+
+<form class="" action="../requisicoesphp/excluir_usuario.php" method="post">
+
+    <table>
+      <tr>
+        <td>Confirme sua senha: </td>
+        <td> <input type="password" name="senha_admin" value=""> </td>
+      </tr>
+      <tr>
+        <td> <input type="submit" name="confirmar" value="Confirmar"> </td>
+      </tr>
+    </table>
+</form>
+
+<?php include("../padrao/rodape.php"); ?>
+>>>>>>> Stashed changes

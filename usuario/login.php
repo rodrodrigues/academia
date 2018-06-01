@@ -8,8 +8,8 @@
   <form class="" action="../requisicoesphp/realizar_login_usuario.php" method="post">
     <table>
       <tr>
-        <td>Matricula:</td>
-        <td> <input type="number" name="matricula"> </td>
+        <td>Email:</td>
+        <td> <input type="text" name="email"> </td>
       </tr>
       <tr>
         <td>Senha: </td>

@@ -12,10 +12,14 @@ $resultado = mysqli_query($conexao, $query);
 
 if (mysqli_num_rows($resultado) > 0) {
     $row = mysqli_fetch_assoc($resultado);
+
     $_SESSION['nomuser'] = $row['nome'];
     $_SESSION['teluser'] = $row['telefone'];
     $_SESSION['emailuser'] = $row['email'];
     $_SESSION['endeuser'] = $row['endereco'];
+
+    $_SESSION['nomeuser'] = $row['nome'];
+
     $_SESSION['matuser'] = $matricula;
     header("Location: ../administrador/dados_de_usuario.php");
   } else {
