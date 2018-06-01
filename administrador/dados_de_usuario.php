@@ -21,7 +21,7 @@
      <a class="nav-link" href="exclui_usuario.php">Excluir Conta de usuario</a>
    </li>
    <li class="nav-item">
-     <a class="nav-link" href="#">Disponibilizar Série</a>
+     <a class="nav-link" href="insere_serie.php">Disponibilizar Série</a>
    </li>
    <li class="nav-item">
      <a class="nav-link" href="#">Disponibilizar dados de avaliação</a>

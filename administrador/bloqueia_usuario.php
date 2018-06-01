@@ -5,6 +5,11 @@
 
   verificaLogin();
 
+  ?>
+  <?php
+  $row = buscaUsuario($_SESSION['matuser']);
+
+  if ($row['status'] == 0) {
  ?>
 
  <h1>Você está bloqueando o usuário de matrícula : <?= $_SESSION['matuser'] ?></h1>
@@ -20,5 +25,21 @@
         </tr>
       </table>
       </form>
+
+    <?php } else {  ?>
+
+      <h2>O usuário <?= $_SESSION['nomuser'] ?> encontra-se bloqueado.</h2>
+
+      <h3>Caso suas pendencias tenham sido corrigidas, desbloqueie sua conta apertando em desbloquear</h3>
+      <form action="../requisicoesphp/desbloquear_usuario.php" method="POST">
+          <table>
+            <tr>
+                <td><input type="submit" name="enviar" value="desbloquear"></td>
+                <td><a href="dados_de_usuario.php" class="btn btn-default">Cancelar</a></td>
+            </tr>
+          </table>
+          </form>
+
+    <?php } ?>
 
  <?php include("../padrao/rodape.php"); ?>

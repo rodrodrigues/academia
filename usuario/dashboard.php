@@ -34,7 +34,7 @@
      <a class="nav-link" href="busca_usuario.php">Marcar treino com personal</a>
    </li>
    <li class="nav-item">
-     <a class="nav-link" href="busca_usuario.php">Consultar série</a>
+     <a class="nav-link" href="consultar_serie.php">Consultar série</a>
    </li>
  </ul>
 
