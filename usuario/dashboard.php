@@ -19,19 +19,13 @@
      <a class="nav-link" href="busca_usuario.php">Consultar horários de pico</a>
    </li>
    <li class="nav-item">
-     <a class="nav-link" href="busca_usuario.php">Calcular IMC</a>
-   </li>
-   <li class="nav-item">
      <a class="nav-link" href="busca_usuario.php">Consultar unidades</a>
    </li>
    <li class="nav-item">
-     <a class="nav-link" href="busca_usuario.php">Consultar Aparelhos</a>
+     <a class="nav-link" href="marca_avaliacao.php">Avaliações</a>
    </li>
    <li class="nav-item">
-     <a class="nav-link" href="busca_usuario.php">Marcar Avaliação</a>
-   </li>
-   <li class="nav-item">
-     <a class="nav-link" href="busca_usuario.php">Marcar treino com personal</a>
+     <a class="nav-link" href="busca_usuario.php">Treinos com personal</a>
    </li>
    <li class="nav-item">
      <a class="nav-link" href="consultar_serie.php">Consultar série</a>

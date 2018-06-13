@@ -57,12 +57,51 @@ session_start();
 
       $massa = $peso / ($altura * $altura);
 
-      $massa = number_format($massa, 2, '.', ',');
+      $massa = number_format($massa, 2, '.', ',]');
 
       return $massa;
 
     }
+}
+  function buscaPersonais(){
+
+    include("conexao.php");
+
+    $query = "SELECT * FROM funcionario WHERE ocupacao = 'personal'";
+
+    $resultado = mysqli_query($conexao, $query);
+
+    if (mysqli_num_rows($resultado) > 0) {
+      $rowPersonais = mysqli_fetch_assoc($resultado);
+
+      return $rowPersonais;
+
+     } else {
+
+       echo "usuario inexistente";
+
+    }
+}
+
+function buscaPersonaisAvaliacao($idPersonal){
+
+  include("conexao.php");
+
+  $query = "SELECT * FROM funcionario WHERE matricula = '$idPersonal'";
+
+  $resultado = mysqli_query($conexao, $query);
+
+  if (mysqli_num_rows($resultado) > 0) {
+    $rowPersonais = mysqli_fetch_assoc($resultado);
+
+    return $rowPersonais;
+
+   } else {
+
+     echo "usuario inexistente";
+
   }
+}
 
 
  ?>
