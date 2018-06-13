@@ -22,9 +22,4 @@
       </tr>
     </table>
   </form>
-  <div class="">
-    <p>
-      <?= $_SESSION['msguser'] ?>
-    </p>
-  </div>
 <?php include("../padrao/rodape.php"); ?>
