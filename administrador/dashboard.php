@@ -23,7 +23,7 @@
      <a class="nav-link" href="#">Disponibilizar horários para avaliações</a>
    </li>
    <li class="nav-item">
-     <a class="nav-link" href="#">Listar Profissionais</a>
+     <a class="nav-link" href="lista_profissionais.php">Listar Profissionais</a>
    </li>
  </ul>
 
