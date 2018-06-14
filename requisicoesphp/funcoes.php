@@ -83,7 +83,7 @@ session_start();
     }
 }
 
-function buscaPersonaisAvaliacao($idPersonal){
+function buscaPersonaisAT($idPersonal){
 
   include("conexao.php");
 

@@ -25,7 +25,7 @@
      <a class="nav-link" href="marca_avaliacao.php">Avaliações</a>
    </li>
    <li class="nav-item">
-     <a class="nav-link" href="busca_usuario.php">Treinos com personal</a>
+     <a class="nav-link" href="marca_treino.php">Treinos com personal</a>
    </li>
    <li class="nav-item">
      <a class="nav-link" href="consultar_serie.php">Consultar série</a>
