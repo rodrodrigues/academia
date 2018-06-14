@@ -96,44 +96,93 @@
   <div class="content-wrapper">
     <div class="container-fluid">
 
-      <body class="bg-dark">
-        <div class="container">
-          <div class="card card-login mx-auto mt-5">
-            <div class="card-header">Alterar Dados</div>
-            <div class="card-body">
-              <form class="" action="../requisicoesphp/alterar_dados_de_usuario_pelo_usuario.php" method="post">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email</label>
-                  <input class="form-control" id="exampleInputEmail1" type="email" name="attemail" value="" placeholder="Digite seu novo e-mail">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Senha</label>
-                  <input class="form-control" id="exampleInputPassword1" type="password" name="attsenha" placeholder="Digite sua nova senha">
-                </div>
-                <div class="form-group">
+          <!-- Card Columns Example Social Feed-->
+          <div class="mb-0 mt-4">
+            <i>></i> Unidades</div>
+          <hr class="mt-2">
+          <div class="card-columns">
+            <!-- Example Social Card-->
+            <div class="card mb-3">
+              <a href="#">
+                <img class="card-img-top img-fluid w-100" src="../images/academia-campo-grande.png" alt="">
+              </a>
+              <div class="card-body">
+                <h6 class="card-title mb-1">Campo Grande</h6>
+                <p class="card-text small"> R. Laplace, 31 - Campo Grande, Rio de Janeiro - RJ, 23080-340
+                  <br>
+                  <h6>Horários</h6>
+                  seg-sex: 6:00 - 23:00
+                  <br>
+                  sab-dom: 10:00 - 20:00
 
-                </div>
-                <input class="btn btn-primary btn-block" type="submit" name="enviar" value="Alterar">
-              </form>
-              <div class="text-center">
-
-
+                </p>
               </div>
+
+
             </div>
-            <center>
-            <p id="msg_js" class="mensagem">
-              <?php
-                 if (isset($_SESSION['mensagem'])) {
-                   echo $_SESSION['mensagem'];
-                   unset($_SESSION['mensagem']);
-                 }
-             ?>
-           </p>
-         </center>
-          </div>
+
+            <div class="card mb-3">
+              <a href="#">
+                <img class="card-img-top img-fluid w-100" src="../images/academia-bangu.jpg" alt="">
+              </a>
+              <div class="card-body">
+                <h6 class="card-title mb-1">Bangu</h6>
+                <p class="card-text small"> Rua Fonseca, 534 - Bangu, Rio de Janeiro - RJ, 21820-005
+                  <br>
+                  <h6>Horários</h6>
+                  seg-sex: 6:00 - 23:00
+                  <br>
+                  sab-dom: 10:00 - 20:00
+
+                </p>
+              </div>
 
 
-        </div>
+            </div>
+
+
+            <div class="card mb-3">
+              <a href="#">
+                <img class="card-img-top img-fluid w-100" src="../images/academia-seropedica.jpg" alt="">
+              </a>
+              <div class="card-body">
+                <h6 class="card-title mb-1">Seropedica</h6>
+                <p class="card-text small">  Av. Ministro Fernando Costa, 951 - Fazenda Caxias, RJ, 23890-000
+                  <br>
+                  <h6>Horários</h6>
+                  seg-sex: 6:00 - 23:00
+                  <br>
+                  sab-dom: 10:00 - 20:00
+
+                </p>
+              </div>
+
+
+            </div>
+
+
+            <div class="card mb-3">
+              <a href="#">
+                <img class="card-img-top img-fluid w-100" src="../images/academia-realengo.jpg" alt="">
+              </a>
+              <div class="card-body">
+                <h6 class="card-title mb-1">Realengo</h6>
+                <p class="card-text small"> Rua Fonseca, 240 - Realengo, Rio de Janeiro - RJ, 21820-005
+                  <br>
+                  <h6>Horários</h6>
+                  seg-sex: 6:00 - 23:00
+                  <br>
+                  sab-dom: 10:00 - 20:00
+
+                </p>
+              </div>
+
+
+            </div>
+
+
+
+
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">

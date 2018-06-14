@@ -47,13 +47,13 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Consultar horários de pico">
-          <a class="nav-link" href="busca_usuario.php">
+          <a class="nav-link" href="consulta_horario.php">
             <i>></i>
             <span class="nav-link-text">Consultar horários de pico</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Consultar unidades">
-          <a class="nav-link" href="busca_usuario.php">
+          <a class="nav-link" href="consulta_unidades.php">
             <i>></i>
             <span class="nav-link-text">Consultar unidades</span>
           </a>
@@ -953,7 +953,7 @@
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-          <small>Copyright © Your Website 2018</small>
+          <small>Copyright © GyMaravilha 2018</small>
         </div>
       </div>
     </footer>

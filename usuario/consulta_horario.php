@@ -26,6 +26,84 @@
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
+
+<?php
+//arquivo segunda feira
+    $arquivosegunda = fopen ('../arquivo-texto-segunda.txt', 'r');
+while(!feof($arquivosegunda))
+{
+$linhasegunda = fgets($arquivosegunda, 1024);
+
+}
+fclose($arquivosegunda);
+
+//arquivo terça feira
+
+$arquivoterca = fopen ('../arquivo-texto-terca.txt', 'r');
+while(!feof($arquivoterca))
+{
+$linhasterca = fgets($arquivoterca, 1024);
+
+}
+fclose($arquivoterca);
+
+//arquivo quarta feira
+
+$arquivoquarta = fopen ('../arquivo-texto-quarta.txt', 'r');
+while(!feof($arquivoquarta))
+{
+$linhasquarta = fgets($arquivoquarta, 1024);
+
+}
+fclose($arquivoquarta);
+
+//arquivo quinta feira
+
+$arquivoquinta = fopen ('../arquivo-texto-quinta.txt', 'r');
+while(!feof($arquivoquinta))
+{
+$linhasquinta = fgets($arquivoquinta, 1024);
+
+}
+fclose($arquivoquinta);
+
+//arquivo sexta feira
+
+$arquivosexta = fopen ('../arquivo-texto-sexta.txt', 'r');
+while(!feof($arquivosexta))
+{
+$linhassexta = fgets($arquivosexta, 1024);
+
+}
+fclose($arquivosexta);
+
+//arquivo sabado
+
+
+
+$arquivosabado = fopen ('../arquivo-texto-sabado.txt', 'r');
+while(!feof($arquivosabado))
+{
+$linhassabado = fgets($arquivosabado, 1024);
+
+}
+fclose($arquivosabado);
+
+//arquivo domingo
+
+$arquivodomingo = fopen ('../arquivo-texto-domingo.txt', 'r');
+while(!feof($arquivodomingo))
+{
+$linhasdomingo = fgets($arquivodomingo, 1024);
+
+}
+fclose($arquivodomingo);
+
+?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="index.html">Seja bem vindo ao painel de controle GyMaravilha, <?= $_SESSION['nome'] ?></a>
@@ -96,46 +174,121 @@
   <div class="content-wrapper">
     <div class="container-fluid">
 
-      <body class="bg-dark">
-        <div class="container">
-          <div class="card card-login mx-auto mt-5">
-            <div class="card-header">Alterar Dados</div>
-            <div class="card-body">
-              <form class="" action="../requisicoesphp/alterar_dados_de_usuario_pelo_usuario.php" method="post">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email</label>
-                  <input class="form-control" id="exampleInputEmail1" type="email" name="attemail" value="" placeholder="Digite seu novo e-mail">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Senha</label>
-                  <input class="form-control" id="exampleInputPassword1" type="password" name="attsenha" placeholder="Digite sua nova senha">
-                </div>
-                <div class="form-group">
+      <!-- Area Chart Example-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-area-chart"></i> Horários de pico em dias de semana</div>
+        <div class="card-body">
+          <canvas class="line-chart"> </canvas>
 
-                </div>
-                <input class="btn btn-primary btn-block" type="submit" name="enviar" value="Alterar">
-              </form>
-              <div class="text-center">
+          <script>
 
 
-              </div>
-            </div>
-            <center>
-            <p id="msg_js" class="mensagem">
-              <?php
-                 if (isset($_SESSION['mensagem'])) {
-                   echo $_SESSION['mensagem'];
-                   unset($_SESSION['mensagem']);
-                 }
-             ?>
-           </p>
-         </center>
-          </div>
 
+        var ctx = document.getElementsByClassName("line-chart");
+
+        var chartGraph = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ["6:00","7:00","8:00","9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"],
+            datasets: [{
+              label: "Pessoas na academia segunda-feira",
+              data: [<?php echo $linhasegunda?>],
+              borderWidth: 6,
+              borderColor: 'rgba(77,166,253,0.85)',
+              backgroundcolor: 'transparent',
+
+            },
+
+            {
+              label: "Pessoas na academia terça-feira",
+              data: [<?php echo $linhasterca?>],
+              borderWidth: 6,
+              borderColor: 'rgba(77,255,166,0.85)',
+              backgroundcolor: 'transparent',
+
+            },
+            {
+              label: "Pessoas na academia quarta-feira",
+              data: [<?php echo $linhasquarta?>],
+              borderWidth: 6,
+              borderColor: 'rgba(255,77,166,0.85)',
+              backgroundcolor: 'transparent',
+
+            },
+            {
+              label: "Pessoas na academia quinta-feira",
+              data: [<?php echo $linhasquinta?>],
+              borderWidth: 6,
+              borderColor: 'rgba(255,255,0,0.85)',
+              backgroundcolor: 'transparent',
+
+            },
+            {
+              label: "Pessoas na academia sexta-feira",
+              data: [<?php echo $linhassexta?>],
+              borderWidth: 6,
+              borderColor: 'rgba(255,0,0,0.85)',
+              backgroundcolor: 'transparent',
+
+            }
+
+                    ]
+
+          }
+        });
+
+        </script>
 
         </div>
-    <!-- /.container-fluid-->
-    <!-- /.content-wrapper-->
+        <div class="card-footer small text-muted">Ultima atualização dia 15/06/2018</div>
+      </div>
+
+      <div class="card-header">
+        <i class="fa fa-area-chart"></i> Horários de pico em finais de semana</div>
+      <div class="card-body">
+        <canvas class="line-chart2"> </canvas>
+
+        <script>
+
+
+
+      var ctx2 = document.getElementsByClassName("line-chart2");
+
+      var chartGraph2 = new Chart(ctx2, {
+        type: 'line',
+        data: {
+          labels: ["10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00"],
+          datasets: [{
+            label: "Pessoas na academia sabado",
+            data: [<?php echo $linhassabado?>],
+            borderWidth: 6,
+            borderColor: 'rgba(77,166,253,0.85)',
+            backgroundcolor: 'transparent',
+
+          },
+
+          {
+            label: "Pessoas na academia domingo",
+            data: [<?php echo $linhasdomingo?>],
+            borderWidth: 6,
+            borderColor: 'rgba(77,255,166,0.85)',
+            backgroundcolor: 'transparent',
+
+          },
+
+                  ]
+
+        }
+      });
+
+      </script>
+
+      </div>
+      <div class="card-footer small text-muted">Ultima atualização dia 15/06/2018</div>
+    </div>
+
+
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">

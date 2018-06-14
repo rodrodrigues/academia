@@ -12,7 +12,7 @@
     $checaTreino = mysqli_query($conexao, $query);
     if (mysqli_num_rows($checaTreino) > 0) {
         $row = mysqli_fetch_assoc($checaTreino);
-        
+
         $rowPersonais = buscaPersonaisAT($row['id_admin']);
 
       ?>
