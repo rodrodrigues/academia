@@ -46,21 +46,18 @@ $observacao = $_POST['observacao'];
 
 $id_usuario = $_SESSION['matuser'];
 
-    $query = "INSERT INTO serie
-          (mat_usuario,
-          exercicio1, exercicio2,exercicio3, exercicio4, exercicio5, exercicio6, exercicio7, exercicio8, exercicio9, exercicio10, exercicio11, exercicio12,
-          repeticao1, repeticao2, repeticao3, repeticao4, repeticao5, repeticao6, repeticao7, repeticao8, repeticao9, repeticao10, repeticao11, repeticao12,
-          quantidade1, quantidade2, quantidade3, quantidade4, quantidade5, quantidade6, quantidade7, quantidade8, quantidade9, quantidade10, quantidade11, quantidade12,
-          observacao)
-          VALUES
-          ('$id_usuario', '$ex1', '$ex2', '$ex3', '$ex4', '$ex5', '$ex6', '$ex7', '$ex8', '$ex9', '$ex10', '$ex11', '$ex12',
-          '$rep1', '$rep2', '$rep3', '$rep4', '$rep5', '$rep6', '$rep7', '$rep8', '$rep9', '$rep10', '$rep11', '$rep12',
-          '$qtd1', '$qtd2', '$qtd3', '$qtd4', '$qtd5', '$qtd6', '$qtd7', '$qtd8', '$qtd9', '$qtd10', '$qtd11', '$qtd12', '$observacao')";
+    $query = "UPDATE serie SET
+          exercicio1 = '$ex1', exercicio2 = '$ex2' ,exercicio3 = '$ex3', exercicio4 = '$ex4', exercicio5 = '$ex5', exercicio6 =  '$ex6',
+          exercicio7 = '$ex7', exercicio8 = '$ex8', exercicio9 = '$ex9', exercicio10 = '$ex10', exercicio11 = '$ex11', exercicio12 = '$ex12',
+          repeticao1 = '$rep1', repeticao2 = '$rep2', repeticao3 = '$rep3', repeticao4 = '$rep4', repeticao5 = '$rep5', repeticao6 = '$rep6',
+          repeticao7 = '$rep7', repeticao8 = '$rep8', repeticao9 = '$rep9', repeticao10 = '$rep10', repeticao11 = '$rep11', repeticao12 = '$rep12',
+          quantidade1 = '$qtd1', quantidade2 = '$qtd2', quantidade3 = '$qtd3', quantidade4 = '$qtd4', quantidade5 = '$qtd5', quantidade6 = '$qtd6',
+          quantidade7 = '$qtd7', quantidade8 = '$qtd8', quantidade9 = '$qtd9', quantidade10 = '$qtd10', quantidade11 = '$qtd11', quantidade12 = '$qtd12',
+          observacao = '$observacao'";
 
-    if (mysqli_query($conexao, $query)) {
+     if (mysqli_query($conexao, $query)) {
         echo "serie cadastrada com sucesso!";
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($conexao);
-    }
 
-?>
+}
