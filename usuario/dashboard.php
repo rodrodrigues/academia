@@ -24,6 +24,11 @@
   <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin.css" rel="stylesheet">
+  <style>
+
+
+
+  </style>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -96,6 +101,7 @@
   </nav>
 
   <div class="content-wrapper">
+<<<<<<< HEAD
     <div class="container-fluid">
           <div class="mb-0 mt-4">
             <i class="fa fa-newspaper-o"></i> Novidades</div>
@@ -105,6 +111,16 @@
             <div class="card mb-3">
               <a href="#">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+=======
+    <center>
+      <br>
+      <h1> Seu novo espaço </h1>
+      <h1> Inove sua saúde!! </h1>
+      <br>
+    </center>
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+>>>>>>> 3ef2b3b4eddc86a69f948cc622bc4f33c057e944
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -113,7 +129,11 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="../images/acad1.jpg" alt="First slide">
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 3ef2b3b4eddc86a69f948cc622bc4f33c057e944
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="../images/acad2.jpg" alt="Second slide">
@@ -122,6 +142,7 @@
             <img class="d-block w-100" src="../images/acad3.jpeg" alt="Third slide">
           </div>
         </div>
+<<<<<<< HEAD
         <div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -229,6 +250,26 @@
             </div>
           </div>
             <!-- Example Social Card-->
+=======
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+
+
+
+
+
+
+            </div>
+
+
+>>>>>>> 3ef2b3b4eddc86a69f948cc622bc4f33c057e944
 
 
     <!-- /.container-fluid-->

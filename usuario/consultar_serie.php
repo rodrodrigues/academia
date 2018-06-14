@@ -13,14 +13,11 @@
 
   $matricula = $_SESSION['matricula'];
 
-  echo $matricula;
+  $query = "SELECT * FROM serie WHERE mat_usuario = '$matricula'";
 
-
-
-  $query = "SELECT * FROM serie WHERE matricula_usuario = '$matricula'";
   $resultado = mysqli_query($conexao, $query);
 
-  if (mysqli_num_rows($resultado) > 0) {
+  if ($resultado) {
 
       $row = mysqli_fetch_assoc($resultado);
 
@@ -52,6 +49,46 @@
      <td> <?= $row['repeticao4'] ?> </td>
      <td> <?= $row['quantidade4'] ?> </td>
    </tr>
+     <tr>
+         <td> <?= $row['exercicio5'] ?> </td>
+         <td> <?= $row['repeticao5'] ?> </td>
+         <td> <?= $row['quantidade5'] ?> </td>
+     </tr>
+     <tr>
+         <td> <?= $row['exercicio6'] ?> </td>
+         <td> <?= $row['repeticao6'] ?> </td>
+         <td> <?= $row['quantidade6'] ?> </td>
+     </tr>
+     <tr>
+         <td> <?= $row['exercicio7'] ?> </td>
+         <td> <?= $row['repeticao7'] ?> </td>
+         <td> <?= $row['quantidade7'] ?> </td>
+     </tr>
+     <tr>
+         <td> <?= $row['exercicio8'] ?> </td>
+         <td> <?= $row['repeticao8'] ?> </td>
+         <td> <?= $row['quantidade8'] ?> </td>
+     </tr>
+     <tr>
+         <td> <?= $row['exercicio9'] ?> </td>
+         <td> <?= $row['repeticao9'] ?> </td>
+         <td> <?= $row['quantidade9'] ?> </td>
+     </tr>
+     <tr>
+         <td> <?= $row['exercicio10'] ?> </td>
+         <td> <?= $row['repeticao10'] ?> </td>
+         <td> <?= $row['quantidade10'] ?> </td>
+     </tr>
+     <tr>
+         <td> <?= $row['exercicio11'] ?> </td>
+         <td> <?= $row['repeticao11'] ?> </td>
+         <td> <?= $row['quantidade11'] ?> </td>
+     </tr>
+     <tr>
+         <td> <?= $row['exercicio12'] ?> </td>
+         <td> <?= $row['repeticao12'] ?> </td>
+         <td> <?= $row['quantidade12'] ?> </td>
+     </tr>
  </table>
 
 <?php } else { ?>
