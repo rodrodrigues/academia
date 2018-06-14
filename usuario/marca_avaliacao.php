@@ -12,12 +12,7 @@
     $checaAvaliacao = mysqli_query($conexao, $query);
     if (mysqli_num_rows($checaAvaliacao) > 0) {
         $row = mysqli_fetch_assoc($checaAvaliacao);
-        var_dump($row);
-
         $rowPersonais = buscaPersonaisAT($row['id_admin']);
-
-        var_dump($rowPersonais);
-
       ?>
         <h2>Você já tem uma avaliação marcada</h2>
 

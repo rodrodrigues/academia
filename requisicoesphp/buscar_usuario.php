@@ -21,8 +21,10 @@ if (mysqli_num_rows($resultado) > 0) {
     $_SESSION['nomeuser'] = $row['nome'];
 
     $_SESSION['matuser'] = $matricula;
-    header("Location: ../administrador/dados_de_usuario.php");
+    header("Location: ../administrador/altera_dados.php");
   } else {
+    $_SESSION['mensagem'] = "Usuário não encontrado";
+    header("Location:../administrador/busca_usuario.php");
     echo "Usuario não encontrado";
   }
 

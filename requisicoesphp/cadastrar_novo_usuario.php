@@ -22,9 +22,12 @@ $query = "INSERT INTO usuario (nome, telefone, email, endereco, senha)
     header("Location: ../administrador/novo_usuario.php");
 }
 if (mysqli_query($conexao, $query)) {
-    echo "Usuário cadastrado com sucesso!";
+    $_SESSION['mensagem'] = "Usuário cadastrado com sucesso!";
+    header("Location: ../administrador/novo_usuario.php");
 } else {
     echo "Error: " . $query . "<br>" . mysqli_error($conexao);
+    $_SESSION['mensagem'] = "Usuário não foi cadastrado com sucesso!";
+    header("Location: ../administrador/novo_usuario.php");
 }
 
 ?>

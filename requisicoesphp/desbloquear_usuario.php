@@ -13,6 +13,6 @@ $resultado = mysqli_query($conexao, $query);
 
 $_SESSION['msgAdmin'] = "Desbloqueio concluido";
 
-header("Location: ../administrador/dashboard.php");
+header("Location: ../administrador/busca_usuario.php");
 
 ?>

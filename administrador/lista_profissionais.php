@@ -13,8 +13,19 @@
 
  <h1>Profissionais</h1>
 
- <?php
-  
-  ?>
+<table class="table table-striped table-bordered">
+
+<?php
+foreach($row as $row) {
+?>
+
+    <tr>
+        <td><?= $row['nome'] ?></td>
+    </tr>
+
+<?php
+}
+?>
+</table>
 
  <?php include("../padrao/rodape.php"); ?>

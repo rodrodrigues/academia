@@ -67,7 +67,7 @@ session_start();
 
     include("conexao.php");
 
-    $query = "SELECT * FROM funcionario WHERE ocupacao = 'personal'";
+    $query = "SELECT * FROM funcionario WHERE ocupacao = 'Personal'";
 
     $resultado = mysqli_query($conexao, $query);
 
@@ -78,7 +78,7 @@ session_start();
 
      } else {
 
-       echo "usuario inexistente";
+       echo "Não existem personais no momento";
 
     }
 }
