@@ -29,7 +29,7 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">Seja bem vindo ao painel de controle admistrador GyMaravilha, <?= $_SESSION['nome'] ?></a>
+    <a class="navbar-brand" href="../administrador/dashboard.php">Seja bem vindo ao painel de controle admistrador GyMaravilha, <?= $_SESSION['nome'] ?></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -51,12 +51,6 @@
           <a class="nav-link" href="busca_usuario.php">
             <i>></i>
             <span class="nav-link-text">Buscar Usuário</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Consultar unidades">
-          <a class="nav-link" href="#">
-            <i>></i>
-            <span class="nav-link-text">Disponibilizar horários para avaliações</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Avaliações">
@@ -86,7 +80,36 @@
 
   <div class="content-wrapper">
     <div class="container-fluid">
+<center><h2>Tenha Paciência, atenda bem, ganhe mais!</h2></center>
+<br><br>
+<h4>Ter paciência é essencial para quem quer vender bem e para qualquer tipo de cliente. Mas quando o cliente trata a compra como uma batalha é ainda mais difícil manter o controle e não estragar a venda. Ao se antecipar e não escutar tudo o que cliente tem a dizer o vendedor corre o risco de perder uma oportunidade de negócio. Além disso, reclamar da atitude do cliente torna mais difícil saber como agir na negociação. Confira abaixo quatro recomendações de especialistas na área de vendas para lidar com clientes difíceis.
+</h4>
+<br>
+<h5><b>1. Mantenha a calma</b>
 
+Tenha paciência e mantenha o equilíbrio emocional. No fundo, o cliente está em busca de algo, uma solução ou uma resposta. O mau humor pode ser resultado de um dia difícil, por isso, ao se distanciar, o atendimento flui melhor.
+
+No caso da pós-venda, a não ser que o problema realmente tenha sido culpa do vendedor, a impaciência do cliente decorre de experiências ruins e que o frustraram de alguma maneira. Por isso, a máxima de que o cliente tem razão deve ser respeitada.
+</h5>
+<br>
+<h5><b>2. Adapte-se ao estilo do cliente</b>
+
+Durante o primeiro contato já é possível perceber se a pessoa para quem você está tentando vender é ansiosa, detalhista ou extrovertida, por exemplo. “Se espelhe no jeito dela, se ela é muito séria, fique sério. Algumas pessoas vão direto ao ponto e outras dependem mais do vendedor”.
+
+Quem trabalha com atendimento tem de prestar atenção nos sinais dos clientes, pois cada abordagem deve ser diferente.
+
+Mesmo que a venda não seja fechada, o cliente mais exigente deve ser respeitado e tratado com cordialidade. “Todo cliente que aparentemente é difícil de lidar precisa ser bem atendido. Pode ser que não gere resultado naquela hora, mas pode gerar negócios futuros”.
+</h5><br>
+<h5><b>2. Foque na solução do problema</b>
+
+Descobrir o motivo pelo qual o cliente procura sua empresa é o caminho mais indicado para lidar com qualquer tipo de cliente. Ao se deparar com um cliente agressivo, especialistas contam que o melhor é não presumir o que ele deseja e deixar que ele se expresse.
+
+As reclamações dos clientes também são uma forma de aprendizado para a empresa e para os vendedores. “Quando o cliente reclama é porque ele ainda se importa. Ele está tentando entrar em um acordo”. Assim, para garantir que ele saia satisfeito o esforço deve ser centralizado em soluções.
+</h5><br>
+<h5><b>4. Estabeleça limites</b>
+
+Insatisfação, impaciência ou agressividade têm limite. Certo afirma que a melhor forma de lidar com um cliente que se descontrola é romper o vínculo. Se o consumidor perder a razão, em situações extremas, a melhor solução é devolver o dinheiro ou interromper o contrato de serviço. Você pode perder o cliente, mas evitará que as dores de cabeça sejam recorrentes.
+</h5>
                 </div>
 
 

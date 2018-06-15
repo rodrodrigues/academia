@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 15-Jun-2018 às 00:20
--- Versão do servidor: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Generation Time: 15-Jun-2018 às 06:04
+-- Versão do servidor: 10.1.24-MariaDB
+-- PHP Version: 7.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -56,7 +56,9 @@ CREATE TABLE `funcionario` (
 --
 
 INSERT INTO `funcionario` (`matricula`, `nome`, `ocupacao`, `email`, `senha`) VALUES
-(12345, 'Rodrigo dos Santos', 'Personal', 'rod@gym.com', 'e7d80ffeefa212b7c5c55700e4f7193e');
+(12345, 'Rodrigo dos Santos', 'Personal', 'rod@gym.com', 'e7d80ffeefa212b7c5c55700e4f7193e'),
+(123456, 'Lucas Costa Xavier', 'Personal', 'lucascx12@gmail.com', 'e7d80ffeefa212b7c5c55700e4f7193e'),
+(1234, 'Ariel Mota de Carvalho', 'prof_pilates', 'arielmcarvalho@gmail.com', 'e7d80ffeefa212b7c5c55700e4f7193e');
 
 -- --------------------------------------------------------
 
@@ -105,13 +107,6 @@ CREATE TABLE `serie` (
   `observacao` mediumtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Extraindo dados da tabela `serie`
---
-
-INSERT INTO `serie` (`mat_usuario`, `exercicio1`, `exercicio2`, `exercicio3`, `exercicio4`, `exercicio5`, `exercicio6`, `exercicio7`, `exercicio8`, `exercicio9`, `exercicio10`, `exercicio11`, `exercicio12`, `repeticao1`, `repeticao2`, `repeticao3`, `repeticao4`, `repeticao5`, `repeticao6`, `repeticao7`, `repeticao8`, `repeticao9`, `repeticao10`, `repeticao11`, `repeticao12`, `quantidade1`, `quantidade2`, `quantidade3`, `quantidade4`, `quantidade5`, `quantidade6`, `quantidade7`, `quantidade8`, `quantidade9`, `quantidade10`, `quantidade11`, `quantidade12`, `observacao`) VALUES
-(5, 'rrr', '', '', '', '', '', '', '', '', '', '', '', '12', '', '', '', '', '', '', '', '', '', '', '', '111', '', '', '', '', '', '', '', '', '', '', '', '');
-
 -- --------------------------------------------------------
 
 --
@@ -126,13 +121,6 @@ CREATE TABLE `treino` (
   `hora` varchar(5) NOT NULL,
   `descricao` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `treino`
---
-
-INSERT INTO `treino` (`id`, `id_usuario`, `id_admin`, `data`, `hora`, `descricao`) VALUES
-(6, 5, 12345, '1998-12-12', '10h', 'teste');
 
 -- --------------------------------------------------------
 
@@ -163,8 +151,9 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`matricula`, `nome`, `telefone`, `email`, `endereco`, `senha`, `peso`, `altura`, `cincunferenciaBraco`, `circunferenciaPeito`, `circunferenciaCintura`, `circunferenciaCoxa`, `circunferenciaPanturrilha`, `serie`, `status`) VALUES
-(4, 'joao', '123456789', 'joaopedefeijao@gmail.com', 'rua do joaozin', 'e10adc3949ba59abbe56e057f20f883e', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '', 0),
-(5, 'Rodrigo', '23212321', 'rod@a.com', 'rua b', '827ccb0eea8a706c4c34a16891f84e7b', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '', 0);
+(9, 'Lucas Costa Xavier', '21996391936', 'lucascx12@gmail.com', 'Rua MarliÃ©ria, 05', 'e10adc3949ba59abbe56e057f20f883e', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '', 0),
+(10, 'Ariel Mota de Carvalho', '21987424914', 'arielmcarvalho@gmail.com', 'Rua camatiÃ¡, 246', 'e10adc3949ba59abbe56e057f20f883e', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '', 0),
+(11, 'Rodrigo Rodrigues', '21980473396', 'rodsr98@gmail.com', 'Nova IguaÃ§u', 'e10adc3949ba59abbe56e057f20f883e', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '', 0);
 
 --
 -- Indexes for dumped tables
@@ -196,20 +185,17 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `avaliacao`
 --
 ALTER TABLE `avaliacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `treino`
 --
 ALTER TABLE `treino`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `matricula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-COMMIT;
+  MODIFY `matricula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

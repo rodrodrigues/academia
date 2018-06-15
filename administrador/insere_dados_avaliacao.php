@@ -6,13 +6,6 @@
 
     include("../requisicoesphp/conexao.php");
 
-    $id_usuario = $_SESSION['matuser'];
-
-    $resultado = mysqli_query($conexao, "SELECT * FROM serie WHERE mat_usuario = '$id_usuario'");
-
-      $a = mysqli_num_rows($resultado);
-
-
 ?>
 <html lang="en">
 
@@ -36,7 +29,7 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="../administrador/dashboard.php">Seja bem vindo ao painel de controle admistrador GyMaravilha, <?= $_SESSION['nome'] ?></a>
+    <a class="navbar-brand" href="index.html">Seja bem vindo ao painel de controle admistrador GyMaravilha, <?= $_SESSION['nome'] ?></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -86,7 +79,7 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <center>
-        <h1>Você está inserindo uma série para o usuário: <?= $_SESSION['nomuser'] ?>,  de matricula: <?= $_SESSION['matuser'] ?></h1>
+        <h1>Você está inserindo dados de avaliação do usuário: <?= $_SESSION['nomuser'] ?>,  de matricula: <?= $_SESSION['matuser'] ?></h1>
       </center>
 
      <ul class="nav nav-tabs">
@@ -110,83 +103,43 @@
       <body class="bg-dark">
         <div class="container">
           <br><br>
-              <form class="" action="../requisicoesphp/atualizar_serie.php" method="post">
-                <table>
-                  <tr>
-                    <td> <label for=""> Exercicio </label> </td>
-                    <td> <label for=""> Repetições </label> </td>
-                    <td> <label for=""> Quantidade </label> </td>
-                  </tr>
-                  <tr>
-                      <td><input type="text" name="ex1"></td>
-                      <td><input type="text" name="rep1"></td>
-                      <td><input type="text" name="qtd1"></td>
-                  </tr>
-                  <tr>
-                      <td><input type="text" name="ex2"></td>
-                      <td><input type="text" name="rep2"></td>
-                      <td><input type="text" name="qtd2"></td>
-                  </tr>
-                  <tr>
-                      <td><input type="text" name="ex3"></td>
-                      <td><input type="text" name="rep3"></td>
-                      <td><input type="text" name="qtd3"></td>
-                  </tr>
-                  <tr>
-                      <td><input type="text" name="ex4"></td>
-                      <td><input type="text" name="rep4"></td>
-                      <td><input type="text" name="qtd4"></td>
-                  </tr>
-                    <tr>
-                        <td><input type="text" name="ex5"></td>
-                        <td><input type="text" name="rep5"></td>
-                        <td><input type="text" name="qtd5"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="ex6"></td>
-                        <td><input type="text" name="rep6"></td>
-                        <td><input type="text" name="qtd6"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="ex7"></td>
-                        <td><input type="text" name="rep7"></td>
-                        <td><input type="text" name="qtd7"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="ex8"></td>
-                        <td><input type="text" name="rep8"></td>
-                        <td><input type="text" name="qtd8"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="ex9"></td>
-                        <td><input type="text" name="rep9"></td>
-                        <td><input type="text" name="qtd9"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="ex10"></td>
-                        <td><input type="text" name="rep10"></td>
-                        <td><input type="text" name="qtd10"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="ex11"></td>
-                        <td><input type="text" name="rep11"></td>
-                        <td><input type="text" name="qtd11"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="ex12"></td>
-                        <td><input type="text" name="rep12"></td>
-                        <td><input type="text" name="qtd12"></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Observações</h3></td>
-                        <td><textarea rows="6" cols="20" name="observacao"></textarea></td>
-                    </tr>
-                  <tr>
-                    <td> <input type="submit"class="btn btn-primary btn-block" name="enviar" value="Cadastrar série"> </td>
-                  </tr>
+          <form class="" action="../requisicoesphp/inserir_dados_avaliacao.php" method="post">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Peso</label>
+              <input class="form-control" id="exampleInputEmail1" type="text" name="peso" value="" placeholder="Digite o peso">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Altura</label>
+              <input class="form-control" id="exampleInputEmail1" type="text" name="altura" value="" placeholder="Digite a altura">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Circunferência do Braço</label>
+              <input class="form-control" id="exampleInputEmail1" type="text" name="cirBraco" value="" placeholder="Digite a circ. do braço">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">CircunferÊncia do Peito</label>
+              <input class="form-control" id="exampleInputPassword1" type="text" name="cirPeito" placeholder="Digite a circ. do peito">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Circunferência da Cintura</label>
+              <input class="form-control" id="exampleInputPassword1" type="text" name="cirCintura" placeholder="Digite circ. da cintura">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Circunferência da Coxa</label>
+              <input class="form-control" id="exampleInputPassword1" type="text" name="cirCoxa" placeholder="Digite a circ. da coxa">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Circunferência da Panturrilha</label>
+              <input class="form-control" id="exampleInputPassword1" type="text" name="cirPanturrilha" placeholder="Digite a circ. da panturrilha">
+            </div>
+            <div class="form-group">
 
-            </table>
-            </form>
+            </div>
+            <input class="btn btn-primary btn-block" type="submit" name="enviar" value="Disponibilizar">
+            <center>
+            <td><a href="busca_usuario.php" class="btn btn-default">Cancelar</a></td>
+          </center>
+          </form>
 
               <div class="text-center">
 

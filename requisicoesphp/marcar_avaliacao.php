@@ -16,7 +16,8 @@ if((!empty($idUsuario)) && (!empty($idPersonal)) && (!empty($descricao)) && (!em
             VALUES ('$idUsuario', '$idPersonal', '$descricao', '$data', '$hora')";
 
   if (mysqli_query($conexao, $query)) {
-          echo "Usuário cadastrado com sucesso!";
+    $_SESSION['mensagem'] = "Avaliação marcada com sucesso!";
+    header("Location: ../usuario/marca_avaliacao.php");
   } else {
           echo "Error: " . $query . "<br>" . mysqli_error($conexao);
   }

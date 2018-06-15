@@ -2,9 +2,24 @@
 <?php
   include("../padrao/cabecalho.php");
   include("../requisicoesphp/funcoes.php");
-
+  include("../requisicoesphp/conexao.php");
   verificaLogin();
   verificaBloqueio();
+  $matricula = $_SESSION['matricula'];
+
+  $query = "SELECT * FROM usuario WHERE matricula = $matricula";
+
+  $resultado = mysqli_query($conexao, $query);
+
+
+  if (mysqli_num_rows($resultado) > 0) {
+      $row = mysqli_fetch_assoc($resultado);
+      $_SESSION['peso'] = $row['peso'];
+      $_SESSION['altura'] = $row['altura'];
+
+    } else {
+
+  }
  ?>
 <html lang="en">
 
@@ -28,7 +43,7 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">Seja bem vindo ao painel de controle GyMaravilha, <?= $_SESSION['nome'] ?></a>
+    <a class="navbar-brand" href="../usuario/dashboard.php">Seja bem vindo ao painel de controle GyMaravilha, <?= $_SESSION['nome'] ?></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -95,6 +110,10 @@
   </nav>
   <div class="content-wrapper">
     <div class="container-fluid">
+      <center><h3> Seu IMC é: <?php
+      echo calculaIMC();
+      ?></center>
+    </h3>
 
       <body class="bg-dark">
         <div class="container">

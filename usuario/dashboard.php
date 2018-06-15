@@ -34,7 +34,7 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">Seja bem vindo ao painel de controle GyMaravilha, <?= $_SESSION['nome'] ?></a>
+    <a class="navbar-brand" href="../usuario/dashboard.php">Seja bem vindo ao painel de controle GyMaravilha, <?= $_SESSION['nome'] ?></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -99,9 +99,7 @@
       </ul>
     </div>
   </nav>
-
   <div class="content-wrapper">
-<<<<<<< HEAD
     <div class="container-fluid">
           <div class="mb-0 mt-4">
             <i class="fa fa-newspaper-o"></i> Novidades</div>
@@ -111,7 +109,7 @@
             <div class="card mb-3">
               <a href="#">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-=======
+
     <center>
       <br>
       <h1> Seu novo espaço </h1>
@@ -120,7 +118,6 @@
     </center>
 
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
->>>>>>> 3ef2b3b4eddc86a69f948cc622bc4f33c057e944
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -129,11 +126,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="../images/acad1.jpg" alt="First slide">
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> 3ef2b3b4eddc86a69f948cc622bc4f33c057e944
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="../images/acad2.jpg" alt="Second slide">
@@ -142,7 +135,7 @@
             <img class="d-block w-100" src="../images/acad3.jpeg" alt="Third slide">
           </div>
         </div>
-<<<<<<< HEAD
+
         <div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -233,7 +226,7 @@
                 <div class="media">
                   <img class="d-flex mr-3" src="http://placehold.it/45x45" alt="">
                   <div class="media-body">
-                    <h6 class="mt-0 mb-1"><a href="#">Equipa GyMaravilha</a></h6>A mais querida S2
+                    <h6 class="mt-0 mb-1"><a href="#">Equipe GyMaravilha</a></h6>A mais querida S2
                     <ul class="list-inline mb-0">
                       <li class="list-inline-item">
                         <a href="#">Curtir</a>
@@ -250,7 +243,7 @@
             </div>
           </div>
             <!-- Example Social Card-->
-=======
+
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
@@ -269,7 +262,6 @@
             </div>
 
 
->>>>>>> 3ef2b3b4eddc86a69f948cc622bc4f33c057e944
 
 
     <!-- /.container-fluid-->

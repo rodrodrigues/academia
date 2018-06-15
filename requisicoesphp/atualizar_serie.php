@@ -56,7 +56,8 @@ $id_usuario = $_SESSION['matuser'];
           observacao = '$observacao'";
 
      if (mysqli_query($conexao, $query)) {
-        echo "serie cadastrada com sucesso!";
+       $_SESSION['mensagem'] = "Série cadastrada com sucesso!";
+       header("Location: ../administrador/insere_serie.php");
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($conexao);
 
