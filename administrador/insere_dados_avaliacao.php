@@ -1,30 +1,12 @@
-
-<!DOCTYPE html>
 <?php
-  include("../padrao/cabecalho.php");
-  include("../requisicoesphp/funcoes.php");
+    include("../padrao/cabecalho.php");
+    include("../requisicoesphp/funcoes.php");
 
-  verificaLogin();
-  //verificaBloqueio();
- ?>
-<html lang="en">
+    verificaLogin();
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>Home</title>
-  <!-- Bootstrap core CSS-->
-  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom fonts for this template-->
-  <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- Page level plugin CSS-->
-  <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-  <!-- Custom styles for this template-->
-  <link href="../css/sb-admin.css" rel="stylesheet">
-</head>
+    include("../requisicoesphp/conexao.php");
+
+?>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
@@ -54,7 +36,7 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Consultar unidades">
-          <a class="nav-link" href="insere_dados_avaliacao.php">
+          <a class="nav-link" href="#">
             <i>></i>
             <span class="nav-link-text">Disponibilizar horários para avaliações</span>
           </a>
@@ -65,7 +47,6 @@
             <span class="nav-link-text">Listar Profissionais</span>
           </a>
         </li>
-
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -83,20 +64,90 @@
       </ul>
     </div>
   </nav>
-
   <div class="content-wrapper">
     <div class="container-fluid">
+      <center>
+        <h1>Você está alterando o usuário, <?= $_SESSION['nomuser'] ?>,  de matricula: <?= $_SESSION['matuser'] ?></h1>
+      </center>
+
+     <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" href="altera_dados.php">Alterar Conta de usuário</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bloqueia_usuario.php">Bloquear Conta de usuário</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="exclui_usuario.php">Excluir Conta de usuario</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="insere_serie.php">Disponibilizar Série</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Disponibilizar dados de avaliação</a>
+        </li>
+      </ul>
+
+      <body class="bg-dark">
+        <div class="container">
+          <div class="card card-login mx-auto mt-5">
+            <div class="card-header">Dados de avaliação</div>
+            <div class="card-body">
+              <form class="" action="../requisicoesphp/alterar_dados_avaliacao.php" method="post">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Peso</label>
+                  <input class="form-control" id="exampleInputEmail1" type="text" name="peso" value="" placeholder="Digite o novo nome do Usuário">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Altura</label>
+                  <input class="form-control" id="exampleInputEmail1" type="text" name="altura" value="" placeholder="Digite o novo email do Usuário">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Circunferencia de Braço</label>
+                  <input class="form-control" id="exampleInputEmail1" type="text" name="cirBraco" value="" placeholder="Digite seu novo e-mail">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">CircunferÊncia de Peito</label>
+                  <input class="form-control" id="exampleInputPassword1" type="text" name="cirPeito" placeholder="Digite sua nova senha">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">CircunferÊncia da Cintura</label>
+                  <input class="form-control" id="exampleInputPassword1" type="text" name="cirCintura" placeholder="Digite sua nova senha">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">CircunferÊncia da Coxa</label>
+                  <input class="form-control" id="exampleInputPassword1" type="text" name="cirCoxa" placeholder="Digite sua nova senha">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">CircunferÊncia de Panturrilha</label>
+                  <input class="form-control" id="exampleInputPassword1" type="text" name="cirPanturrilha" placeholder="Digite sua nova senha">
+                </div>
+                <div class="form-group">
 
                 </div>
+                <input class="btn btn-primary btn-block" type="submit" name="enviar" value="Alterar">
+                <center>
+                <td><a href="busca_usuario.php" class="btn btn-default">Cancelar</a></td>
+              </center>
+              </form>
+              <div class="text-center">
 
 
               </div>
+            </div>
+            <center>
+            <p id="msg_js" class="mensagem">
+              <?php
+                 if (isset($_SESSION['mensagem'])) {
+                   echo $_SESSION['mensagem'];
+                   unset($_SESSION['mensagem']);
+                 }
+             ?>
+           </p>
+         </center>
+          </div>
 
-
-
-            <!-- Example Social Card-->
-
-
+        </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
@@ -144,7 +195,5 @@
     <script src="../js/sb-admin-charts.min.js"></script>
   </div>
 </body>
-<?php
- include("../padrao/rodape.php");
-?>
-</html>
+
+<?php include("../padrao/rodape.php") ?>
