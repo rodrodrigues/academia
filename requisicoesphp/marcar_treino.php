@@ -9,6 +9,10 @@ include("funcoes.php");
  $data = $_POST['data_treino'];
  $hora = $_POST['hora_treino'];
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 80e1c00658a23f32aa88e143e6d8251885b5b8e5
 if((!empty($idUsuario)) && (!empty($idPersonal)) && (!empty($descricao)) && (!empty($data))
 && (!empty($hora))){
 

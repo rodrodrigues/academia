@@ -1,1 +1,5 @@
 node_modules
+requisicoesphp/marcar_treino.php
+requisicoesphp/inserir_dados_avaliacao.php
+administrador/insere_dados_avaliacao.php
+administrador/dashboard.php

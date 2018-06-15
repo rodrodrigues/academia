@@ -7,6 +7,7 @@
     include("../requisicoesphp/conexao.php");
 
 ?>
+<<<<<<< HEAD
 <html lang="en">
 
 <head>
@@ -25,6 +26,8 @@
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin.css" rel="stylesheet">
 </head>
+=======
+>>>>>>> 80e1c00658a23f32aa88e143e6d8251885b5b8e5
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
@@ -53,6 +56,15 @@
             <span class="nav-link-text">Buscar Usuário</span>
           </a>
         </li>
+<<<<<<< HEAD
+=======
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Consultar unidades">
+          <a class="nav-link" href="#">
+            <i>></i>
+            <span class="nav-link-text">Disponibilizar horários para avaliações</span>
+          </a>
+        </li>
+>>>>>>> 80e1c00658a23f32aa88e143e6d8251885b5b8e5
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Avaliações">
           <a class="nav-link" href="lista_profissionais.php">
             <i>></i>
@@ -79,7 +91,11 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <center>
+<<<<<<< HEAD
         <h1>Você está inserindo dados de avaliação do usuário: <?= $_SESSION['nomuser'] ?>,  de matricula: <?= $_SESSION['matuser'] ?></h1>
+=======
+        <h1>Você está alterando o usuário, <?= $_SESSION['nomuser'] ?>,  de matricula: <?= $_SESSION['matuser'] ?></h1>
+>>>>>>> 80e1c00658a23f32aa88e143e6d8251885b5b8e5
       </center>
 
      <ul class="nav nav-tabs">
@@ -96,12 +112,17 @@
           <a class="nav-link" href="insere_serie.php">Disponibilizar Série</a>
         </li>
         <li class="nav-item">
+<<<<<<< HEAD
           <a class="nav-link" href="insere_dados_avaliacao.php">Disponibilizar dados de avaliação</a>
+=======
+          <a class="nav-link" href="#">Disponibilizar dados de avaliação</a>
+>>>>>>> 80e1c00658a23f32aa88e143e6d8251885b5b8e5
         </li>
       </ul>
 
       <body class="bg-dark">
         <div class="container">
+<<<<<<< HEAD
           <br><br>
           <form class="" action="../requisicoesphp/inserir_dados_avaliacao.php" method="post">
             <div class="form-group">
@@ -141,6 +162,48 @@
           </center>
           </form>
 
+=======
+          <div class="card card-login mx-auto mt-5">
+            <div class="card-header">Dados de avaliação</div>
+            <div class="card-body">
+              <form class="" action="../requisicoesphp/alterar_dados_avaliacao.php" method="post">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Peso</label>
+                  <input class="form-control" id="exampleInputEmail1" type="text" name="peso" value="" placeholder="Digite o novo nome do Usuário">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Altura</label>
+                  <input class="form-control" id="exampleInputEmail1" type="text" name="altura" value="" placeholder="Digite o novo email do Usuário">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Circunferencia de Braço</label>
+                  <input class="form-control" id="exampleInputEmail1" type="text" name="cirBraco" value="" placeholder="Digite seu novo e-mail">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">CircunferÊncia de Peito</label>
+                  <input class="form-control" id="exampleInputPassword1" type="text" name="cirPeito" placeholder="Digite sua nova senha">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">CircunferÊncia da Cintura</label>
+                  <input class="form-control" id="exampleInputPassword1" type="text" name="cirCintura" placeholder="Digite sua nova senha">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">CircunferÊncia da Coxa</label>
+                  <input class="form-control" id="exampleInputPassword1" type="text" name="cirCoxa" placeholder="Digite sua nova senha">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">CircunferÊncia de Panturrilha</label>
+                  <input class="form-control" id="exampleInputPassword1" type="text" name="cirPanturrilha" placeholder="Digite sua nova senha">
+                </div>
+                <div class="form-group">
+
+                </div>
+                <input class="btn btn-primary btn-block" type="submit" name="enviar" value="Alterar">
+                <center>
+                <td><a href="busca_usuario.php" class="btn btn-default">Cancelar</a></td>
+              </center>
+              </form>
+>>>>>>> 80e1c00658a23f32aa88e143e6d8251885b5b8e5
               <div class="text-center">
 
 
@@ -206,7 +269,12 @@
     <script src="../js/sb-admin-charts.min.js"></script>
   </div>
 </body>
+<<<<<<< HEAD
 <?php
  include("../padrao/rodape.php");
 ?>
 </html>
+=======
+
+<?php include("../padrao/rodape.php") ?>
+>>>>>>> 80e1c00658a23f32aa88e143e6d8251885b5b8e5

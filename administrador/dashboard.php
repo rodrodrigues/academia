@@ -53,6 +53,15 @@
             <span class="nav-link-text">Buscar Usuário</span>
           </a>
         </li>
+<<<<<<< HEAD
+=======
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Consultar unidades">
+          <a class="nav-link" href="insere_dados_avaliacao.php">
+            <i>></i>
+            <span class="nav-link-text">Disponibilizar horários para avaliações</span>
+          </a>
+        </li>
+>>>>>>> 80e1c00658a23f32aa88e143e6d8251885b5b8e5
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Avaliações">
           <a class="nav-link" href="lista_profissionais.php">
             <i>></i>
