@@ -182,7 +182,7 @@
                         <td><textarea rows="6" cols="20" name="observacao"></textarea></td>
                         <td><input type="date" name="data_treino"></td>
                     </tr>
-                  
+
                   <tr>
                     <td> <input type="submit"class="btn btn-primary btn-block" name="enviar" value="Cadastrar série"> </td>
                   </tr>
@@ -257,5 +257,7 @@
 </body>
 <?php
  include("../padrao/rodape.php");
+
+ 
 ?>
 </html>

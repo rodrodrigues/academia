@@ -169,5 +169,7 @@ Insatisfação, impaciência ou agressividade têm limite. Certo afirma que a me
 </body>
 <?php
  include("../padrao/rodape.php");
+
+ 
 ?>
 </html>

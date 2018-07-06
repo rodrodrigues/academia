@@ -25,8 +25,10 @@ if((!empty($idUsuario)) && (!empty($idPersonal)) && (!empty($descricao)) && (!em
 } else{
   $_SESSION['mensagem'] = "campo vazio!";
   header("Location: ../usuario/marca_treino.php");
-        
+
 }
+
+
 
 
 
