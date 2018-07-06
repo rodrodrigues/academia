@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 15-Jun-2018 às 00:20
--- Versão do servidor: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Generation Time: 06-Jul-2018 às 02:58
+-- Versão do servidor: 10.1.24-MariaDB
+-- PHP Version: 7.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -40,6 +40,34 @@ CREATE TABLE `avaliacao` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `dadosavaliacao`
+--
+
+CREATE TABLE `dadosavaliacao` (
+  `codigo` int(11) NOT NULL,
+  `matricula` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `peso` decimal(10,2) NOT NULL,
+  `altura` decimal(10,2) NOT NULL,
+  `cincunferenciaBraco` decimal(10,2) NOT NULL,
+  `circunferenciaPeito` decimal(10,2) NOT NULL,
+  `circunferenciaCintura` decimal(10,2) NOT NULL,
+  `circunferenciaCoxa` decimal(10,2) NOT NULL,
+  `circunferenciaPanturrilha` decimal(10,2) NOT NULL,
+  `data` varchar(10) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `dadosavaliacao`
+--
+
+INSERT INTO `dadosavaliacao` (`codigo`, `matricula`, `nome`, `peso`, `altura`, `cincunferenciaBraco`, `circunferenciaPeito`, `circunferenciaCintura`, `circunferenciaCoxa`, `circunferenciaPanturrilha`, `data`) VALUES
+(3, 9, 'Lucas Costa', '70.00', '196.00', '60.00', '60.00', '60.00', '60.00', '60.00', '2018-07-30'),
+(4, 9, 'Lucas Costa', '75.00', '196.00', '70.00', '70.00', '70.00', '70.00', '70.00', '2018-08-30');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `funcionario`
 --
 
@@ -56,7 +84,9 @@ CREATE TABLE `funcionario` (
 --
 
 INSERT INTO `funcionario` (`matricula`, `nome`, `ocupacao`, `email`, `senha`) VALUES
-(12345, 'Rodrigo dos Santos', 'Personal', 'rod@gym.com', 'e7d80ffeefa212b7c5c55700e4f7193e');
+(12345, 'Rodrigo', 'Personal', 'rod@gym.com', 'e7d80ffeefa212b7c5c55700e4f7193e'),
+(123456, 'Ariel', 'Personal', 'arielmcarvalho@gmail.com', 'e7d80ffeefa212b7c5c55700e4f7193e'),
+(12313, 'Lucas', 'Personal', 'doiera@gmail.com', 'e7d80ffeefa212b7c5c55700e4f7193e');
 
 -- --------------------------------------------------------
 
@@ -65,7 +95,9 @@ INSERT INTO `funcionario` (`matricula`, `nome`, `ocupacao`, `email`, `senha`) VA
 --
 
 CREATE TABLE `serie` (
+  `codigo` int(11) NOT NULL,
   `mat_usuario` int(11) DEFAULT NULL,
+  `data` varchar(10) NOT NULL,
   `exercicio1` varchar(100) DEFAULT NULL,
   `exercicio2` varchar(100) DEFAULT NULL,
   `exercicio3` varchar(100) DEFAULT NULL,
@@ -109,8 +141,9 @@ CREATE TABLE `serie` (
 -- Extraindo dados da tabela `serie`
 --
 
-INSERT INTO `serie` (`mat_usuario`, `exercicio1`, `exercicio2`, `exercicio3`, `exercicio4`, `exercicio5`, `exercicio6`, `exercicio7`, `exercicio8`, `exercicio9`, `exercicio10`, `exercicio11`, `exercicio12`, `repeticao1`, `repeticao2`, `repeticao3`, `repeticao4`, `repeticao5`, `repeticao6`, `repeticao7`, `repeticao8`, `repeticao9`, `repeticao10`, `repeticao11`, `repeticao12`, `quantidade1`, `quantidade2`, `quantidade3`, `quantidade4`, `quantidade5`, `quantidade6`, `quantidade7`, `quantidade8`, `quantidade9`, `quantidade10`, `quantidade11`, `quantidade12`, `observacao`) VALUES
-(5, 'rrr', '', '', '', '', '', '', '', '', '', '', '', '12', '', '', '', '', '', '', '', '', '', '', '', '111', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO `serie` (`codigo`, `mat_usuario`, `data`, `exercicio1`, `exercicio2`, `exercicio3`, `exercicio4`, `exercicio5`, `exercicio6`, `exercicio7`, `exercicio8`, `exercicio9`, `exercicio10`, `exercicio11`, `exercicio12`, `repeticao1`, `repeticao2`, `repeticao3`, `repeticao4`, `repeticao5`, `repeticao6`, `repeticao7`, `repeticao8`, `repeticao9`, `repeticao10`, `repeticao11`, `repeticao12`, `quantidade1`, `quantidade2`, `quantidade3`, `quantidade4`, `quantidade5`, `quantidade6`, `quantidade7`, `quantidade8`, `quantidade9`, `quantidade10`, `quantidade11`, `quantidade12`, `observacao`) VALUES
+(9, 9, '2018-07-25', 'Remada', 'Puxada Pulley', 'Crucifixo', '', '', '', '', '', '', '', '', '', '10', '15', '5', '', '', '', '', '', '', '', '', '', '3', '2', '4', '', '', '', '', '', '', '', '', '', 'Aluno maneiro'),
+(10, 9, '2018-07-30', 'Remada', 'Puxada Pulley', 'Crucifixo', 'Biceps Pulley', '', '', '', '', '', '', '', '', '40', '30', '25', '15', '', '', '', '', '', '', '', '', '4', '4', '3', '1', '', '', '', '', '', '', '', '', 'Aluno continua maneiro');
 
 -- --------------------------------------------------------
 
@@ -126,13 +159,6 @@ CREATE TABLE `treino` (
   `hora` varchar(5) NOT NULL,
   `descricao` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `treino`
---
-
-INSERT INTO `treino` (`id`, `id_usuario`, `id_admin`, `data`, `hora`, `descricao`) VALUES
-(6, 5, 12345, '1998-12-12', '10h', 'teste');
 
 -- --------------------------------------------------------
 
@@ -163,8 +189,9 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`matricula`, `nome`, `telefone`, `email`, `endereco`, `senha`, `peso`, `altura`, `cincunferenciaBraco`, `circunferenciaPeito`, `circunferenciaCintura`, `circunferenciaCoxa`, `circunferenciaPanturrilha`, `serie`, `status`) VALUES
-(4, 'joao', '123456789', 'joaopedefeijao@gmail.com', 'rua do joaozin', 'e10adc3949ba59abbe56e057f20f883e', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '', 0),
-(5, 'Rodrigo', '23212321', 'rod@a.com', 'rua b', '827ccb0eea8a706c4c34a16891f84e7b', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '', 0);
+(5, 'Rodrigo', '23212321', 'rod@a.com', 'rua b', 'e10adc3949ba59abbe56e057f20f883e', '180.00', '180.00', '180.00', '180.00', '180.00', '180.00', '180.00', '', 0),
+(6, 'Ariel Mota de Carvalho', '21987424914', 'arielmcarvalho@gmail.com', 'JacarepaguÃ¡, Pechincha, Rua camatia, 246', 'e10adc3949ba59abbe56e057f20f883e', '182.00', '182.00', '182.00', '182.00', '182.00', '182.00', '182.00', '', 0),
+(9, 'Lucas Costa', '21123456789', 'lucascx12@gmail.com', 'Rua Camatia, 246', 'e10adc3949ba59abbe56e057f20f883e', '75.00', '196.00', '70.00', '70.00', '70.00', '70.00', '70.00', '', 0);
 
 --
 -- Indexes for dumped tables
@@ -175,6 +202,18 @@ INSERT INTO `usuario` (`matricula`, `nome`, `telefone`, `email`, `endereco`, `se
 --
 ALTER TABLE `avaliacao`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `dadosavaliacao`
+--
+ALTER TABLE `dadosavaliacao`
+  ADD PRIMARY KEY (`codigo`);
+
+--
+-- Indexes for table `serie`
+--
+ALTER TABLE `serie`
+  ADD PRIMARY KEY (`codigo`);
 
 --
 -- Indexes for table `treino`
@@ -196,20 +235,27 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `avaliacao`
 --
 ALTER TABLE `avaliacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `dadosavaliacao`
+--
+ALTER TABLE `dadosavaliacao`
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `serie`
+--
+ALTER TABLE `serie`
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `treino`
 --
 ALTER TABLE `treino`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `matricula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-COMMIT;
+  MODIFY `matricula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

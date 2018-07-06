@@ -42,23 +42,26 @@ $qtd10 = $_POST['qtd10'];
 $qtd11 = $_POST['qtd11'];
 $qtd12 = $_POST['qtd12'];
 
+$data = $_POST['data_treino'];
+
 $observacao = $_POST['observacao'];
 
 $id_usuario = $_SESSION['matuser'];
 
     $query = "INSERT INTO serie
-          (mat_usuario,
+          (mat_usuario, data,
           exercicio1, exercicio2,exercicio3, exercicio4, exercicio5, exercicio6, exercicio7, exercicio8, exercicio9, exercicio10, exercicio11, exercicio12,
           repeticao1, repeticao2, repeticao3, repeticao4, repeticao5, repeticao6, repeticao7, repeticao8, repeticao9, repeticao10, repeticao11, repeticao12,
           quantidade1, quantidade2, quantidade3, quantidade4, quantidade5, quantidade6, quantidade7, quantidade8, quantidade9, quantidade10, quantidade11, quantidade12,
           observacao)
           VALUES
-          ('$id_usuario', '$ex1', '$ex2', '$ex3', '$ex4', '$ex5', '$ex6', '$ex7', '$ex8', '$ex9', '$ex10', '$ex11', '$ex12',
+          ('$id_usuario', '$data', '$ex1', '$ex2', '$ex3', '$ex4', '$ex5', '$ex6', '$ex7', '$ex8', '$ex9', '$ex10', '$ex11', '$ex12',
           '$rep1', '$rep2', '$rep3', '$rep4', '$rep5', '$rep6', '$rep7', '$rep8', '$rep9', '$rep10', '$rep11', '$rep12',
           '$qtd1', '$qtd2', '$qtd3', '$qtd4', '$qtd5', '$qtd6', '$qtd7', '$qtd8', '$qtd9', '$qtd10', '$qtd11', '$qtd12', '$observacao')";
 
-    if (mysqli_query($conexao, $query)) {
-        echo "serie cadastrada com sucesso!";
+    if (mysqli_query($conexao, $query))  {
+    $_SESSION['mensagem'] = "serie cadastrada com sucesso!";
+    header("Location: ../administrador/insere_serie.php");
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($conexao);
     }

@@ -55,7 +55,7 @@ session_start();
 
       $altura = $altura / 100;
 
-      $massa = $peso / ($altura * $altura);
+      $massa = $peso / ($altura * $altura+1);
 
       $massa = number_format($massa, 2, '.', ',]');
 

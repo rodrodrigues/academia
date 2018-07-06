@@ -24,7 +24,7 @@
      <a class="nav-link" href="insere_serie.php">Disponibilizar Série</a>
    </li>
    <li class="nav-item">
-     <a class="nav-link" href="#">Disponibilizar dados de avaliação</a>
+     <a class="nav-link" href="insere_dados_avaliacao.php">Disponibilizar dados de avaliação</a>
    </li>
  </ul>
 

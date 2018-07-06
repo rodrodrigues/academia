@@ -44,9 +44,11 @@ $qtd12 = $_POST['qtd12'];
 
 $observacao = $_POST['observacao'];
 
+
 $id_usuario = $_SESSION['matuser'];
 
     $query = "UPDATE serie SET
+          mat_usuario = '$id_usuario',
           exercicio1 = '$ex1', exercicio2 = '$ex2' ,exercicio3 = '$ex3', exercicio4 = '$ex4', exercicio5 = '$ex5', exercicio6 =  '$ex6',
           exercicio7 = '$ex7', exercicio8 = '$ex8', exercicio9 = '$ex9', exercicio10 = '$ex10', exercicio11 = '$ex11', exercicio12 = '$ex12',
           repeticao1 = '$rep1', repeticao2 = '$rep2', repeticao3 = '$rep3', repeticao4 = '$rep4', repeticao5 = '$rep5', repeticao6 = '$rep6',
@@ -56,7 +58,8 @@ $id_usuario = $_SESSION['matuser'];
           observacao = '$observacao'";
 
      if (mysqli_query($conexao, $query)) {
-        echo "serie cadastrada com sucesso!";
+       $_SESSION['mensagem'] = "Série cadastrada com sucesso!";
+       header("Location: ../administrador/insere_serie.php");
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($conexao);
 

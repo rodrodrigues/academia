@@ -9,10 +9,6 @@ include("funcoes.php");
  $data = $_POST['data_treino'];
  $hora = $_POST['hora_treino'];
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 3ef2b3b4eddc86a69f948cc622bc4f33c057e944
 if((!empty($idUsuario)) && (!empty($idPersonal)) && (!empty($descricao)) && (!empty($data))
 && (!empty($hora))){
 
@@ -20,13 +16,16 @@ if((!empty($idUsuario)) && (!empty($idPersonal)) && (!empty($descricao)) && (!em
             VALUES ('$idUsuario', '$idPersonal', '$data', '$hora', '$descricao')";
 
   if (mysqli_query($conexao, $query)) {
-          echo "Treino marcado!";
+    $_SESSION['mensagem'] = "Treino Marcado com sucesso!";
+    header("Location: ../usuario/marca_treino.php");
   } else {
           echo "Error: " . $query . "<br>" . mysqli_error($conexao);
   }
 
 } else{
-        echo "campo vazio";
+  $_SESSION['mensagem'] = "campo vazio!";
+  header("Location: ../usuario/marca_treino.php");
+        
 }
 
 
